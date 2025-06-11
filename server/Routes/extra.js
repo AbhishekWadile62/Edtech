@@ -4,7 +4,7 @@ const NotesModel= require("../Models/notes");
 const VideosModel = require("../Models/video");
 const pyqsModel = require("../Models/pyqs");
 
-//http://localhost:8080/extra/test
+//https://edtech-1-soei.onrender.com/extra/test
 router.post('/test',async(req,res)=>{
     console.log(req.body);
     // const {title,link} = req.body;
@@ -25,7 +25,7 @@ router.post('/test',async(req,res)=>{
     }
 })  
 
-//http://localhost:8080/extra/shownotes
+//https://edtech-1-soei.onrender.com/extra/shownotes
 router.get('/shownotes',async(req,res)=>{
     try {
         const notes = await NotesModel.find();
@@ -36,7 +36,7 @@ router.get('/shownotes',async(req,res)=>{
     }
 });
 
-//http://localhost:8080/extra/videotest
+//https://edtech-1-soei.onrender.com/extra/videotest
 router.post('/videotest',async(req,res)=>{
     console.log(req.body);
     // const {title,link} = req.body;
@@ -57,7 +57,7 @@ router.post('/videotest',async(req,res)=>{
     }
 })
 
-//http://localhost:8080/extra/showvideos
+//https://edtech-1-soei.onrender.com/extra/showvideos
 router.get('/showvideos',async(req,res)=>{
     try {
         const notes = await VideosModel.find();
@@ -68,7 +68,7 @@ router.get('/showvideos',async(req,res)=>{
     }
 });
 
-//http://localhost:8080/extra/pyqtest
+//https://edtech-1-soei.onrender.com/extra/pyqtest
 router.post('/pyqtest',async(req,res)=>{
     console.log(req.body);
     // const {title,link} = req.body;
@@ -89,7 +89,7 @@ router.post('/pyqtest',async(req,res)=>{
     }
 })
 
-//http://localhost:8080/extra/showvideos
+//https://edtech-1-soei.onrender.com/extra/showvideos
 router.get('/showpyqs',async(req,res)=>{
     try {
         const pyqs = await pyqsModel.find();

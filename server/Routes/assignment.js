@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const AssignmentModel=require('../Models/assignments.js');
 const PracticalsModel=require('../Models/practicals.js');
-//http://localhost:8080/dash/assignments
+//https://edtech-1-soei.onrender.com/dash/assignments
 
 router.post('/assignments',async(req,res)=>{
     try{
@@ -19,7 +19,7 @@ router.post('/assignments',async(req,res)=>{
         res.status(500).send('Server Error');
     }
 })
-//http://localhost:8080/dash/showyeshchigand
+//https://edtech-1-soei.onrender.com/dash/showyeshchigand
 router.get('/showyeshchigand',async(req,res)=>{
     try {
         const ass = await AssignmentModel.find();
@@ -30,7 +30,7 @@ router.get('/showyeshchigand',async(req,res)=>{
     }
 });
 
-//http://localhost:8080/dash/oneAssignment/:_id
+//https://edtech-1-soei.onrender.com/dash/oneAssignment/:_id
 router.get("/oneAssignment/:_id",async(req,res)=>{
     const id = req.params._id.replace(":", "");
     // console.log(req.params);
@@ -46,7 +46,7 @@ router.get("/oneAssignment/:_id",async(req,res)=>{
     }
 })
 
-//http://localhost:8080/dash/practicals
+//https://edtech-1-soei.onrender.com/dash/practicals
 
 router.post('/practicals',async(req,res)=>{
     try{
@@ -63,7 +63,7 @@ router.post('/practicals',async(req,res)=>{
         res.status(500).send('Server Error');
     }
 })
-//http://localhost:8080/dash/showpracticals
+//https://edtech-1-soei.onrender.com/dash/showpracticals
 router.get('/showpracticals',async(req,res)=>{
     try {
         const ass = await PracticalsModel.find();
@@ -74,7 +74,7 @@ router.get('/showpracticals',async(req,res)=>{
     }
 });
 
-//http://localhost:8080/dash/onePracticalSubject/:_id
+//https://edtech-1-soei.onrender.com/dash/onePracticalSubject/:_id
 router.get("/onePracticalSubject/:_id",async(req,res)=>{
     const id = req.params._id.replace(":", "");
     // console.log("id/:",id)
